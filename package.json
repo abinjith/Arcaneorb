@@ -1,0 +1,60 @@
+{
+    "name": "bubbo-bubbo",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "A simple PixiJS game project to help developers learn how a professional makes games using the PixiJS library.",
+    "author": {
+        "name": "AshsHub",
+        "url": "https://github.com/AshsHub"
+    },
+    "scripts": {
+        "prestart": "run-s assets",
+        "start": "vite --open",
+        "clean": "rimraf dist/* public/*",
+        "prebuild": "run-s clean format:check lint assets types",
+        "build": "vite build --base \"./\"",
+        "assets": "assetpack",
+        "prepreview": "run-s build",
+        "preview": "vite preview --open",
+        "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
+        "format": "prettier --write src",
+        "format:check": "prettier --check src",
+        "types": "tsc"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.12.1",
+        "@eslint/config-array": "^0.19.1",
+        "@humanwhocodes/config-array": "^0.13.0",
+        "@humanwhocodes/object-schema": "^2.0.3",
+        "@jimp/jpeg": "^0.22.12",
+        "@jimp/types": "^1.6.0",
+        "@pixi/devtools": "^2.0.1",
+        "@pixi/sound": "^6.0.1",
+        "@pixi/ui": "^2.2.0",
+        "core-js": "^3.40.0",
+        "glob": "^11.0.1",
+        "gsap": "^3.12.5",
+        "jimp": "^1.6.0",
+        "jpeg-js": "^0.4.4",
+        "mkdirp": "^3.0.1",
+        "npm-check": "^6.0.1",
+        "phin": "^3.7.1",
+        "pixi-filters": "^6.0.6",
+        "pixi.js": "^8.6.6",
+        "terminal-size": "^4.0.0",
+        "typed-signals": "^3.0.0"
+    },
+    "devDependencies": {
+        "@assetpack/core": "^1.2.3",
+        "@typescript-eslint/eslint-plugin": "^8.19.1",
+        "@typescript-eslint/parser": "^8.19.1",
+        "eslint": "^9.18.0",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^3.4.2",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.7.3",
+        "vite": "^6.0.7"
+    }
+}
