@@ -10,7 +10,7 @@
     "scripts": {
         "prestart": "run-s assets",
         "start": "vite --open",
-        "clean": "rimraf dist/* public/*",
+        "clean": "rimraf --glob dist/* public/*",
         "prebuild": "run-s clean assets types",
         "build": "vite build --base \"./\"",
         "assets": "assetpack",

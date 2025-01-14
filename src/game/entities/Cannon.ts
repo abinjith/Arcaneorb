@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { Container, Sprite } from 'pixi.js';
 
 import type { BubbleType } from '../boardConfig';
-import { boardConfig } from '../boardConfig';
+//import { boardConfig } from '../boardConfig';
 import { BubbleView } from './BubbleView';
 
 /** A class representing the cannon. */

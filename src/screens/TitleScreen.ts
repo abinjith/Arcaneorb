@@ -11,7 +11,6 @@ import { navigation } from '../navigation';
 import { storage } from '../storage';
 import { AudioButton } from '../ui/buttons/AudioButton';
 import { PrimaryButton } from '../ui/buttons/PrimaryButton';
-import { PixiLogo } from '../ui/PixiLogo';
 import { Porthole } from '../ui/Porthole';
 import { Title } from '../ui/Title';
 import { i18n } from '../utils/i18n';
@@ -33,7 +32,6 @@ export class TitleScreen extends Container implements AppScreen {
     private readonly _background: TilingSprite;
 
     private _title!: Title;
-    private _pixiLogo!: PixiLogo;
     private _cannon!: Cannon;
     private _footer!: Graphics;
     private _forkBtn!: PrimaryButton;
