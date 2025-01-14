@@ -35,8 +35,8 @@ export class Title {
         const bubbleTop = new BubbleView(randomType());
 
         bubbleTop.view.position.set(titleTop.width * 0.5 - 33.5, -titleTop.height * 0.5 - 20); // Adjust the y value as needed
-bubbleTop.view.scale.set(2);
-topWrapper.addChild(bubbleTop.view);
+        bubbleTop.view.scale.set(2);
+        topWrapper.addChild(bubbleTop.view);
 
         // const bottomWrapper = new Container();
         // // Add bottom part of the title
@@ -73,8 +73,8 @@ topWrapper.addChild(bubbleTop.view);
         });
 
         subtitle.anchor.set(0.5);
-// Position the subtitle independently of bottomWrapper
-subtitle.y = titleTop.height + 20; // Adjust this value as needed
-this.view.addChild(subtitle);
+        // Position the subtitle independently of bottomWrapper
+        subtitle.y = titleTop.height + 20; // Adjust this value as needed
+        this.view.addChild(subtitle);
     }
 }

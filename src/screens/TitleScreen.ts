@@ -151,51 +151,51 @@ export class TitleScreen extends Container implements AppScreen {
     }
 
     /**
- * Gets called every time the screen resizes.
- * @param w - width of the screen.
- * @param h - height of the screen.
- */
-public resize(w: number, h: number) {
-    // Fit background to screen
-    this._background.width = w;
-    this._background.height = h;
+     * Gets called every time the screen resizes.
+     * @param w - width of the screen.
+     * @param h - height of the screen.
+     */
+    public resize(w: number, h: number) {
+        // Fit background to screen
+        this._background.width = w;
+        this._background.height = h;
 
-    // Set visuals to their respective locations
-    this._title.view.x = w * 0.5;
-    this._title.view.y = 145;
+        // Set visuals to their respective locations
+        this._title.view.x = w * 0.5;
+        this._title.view.y = 145;
 
-    // Remove or comment out the PixiLogo positioning code
-    // this._pixiLogo.view.x = 55;
-    // this._pixiLogo.view.y = h - 40;
+        // Remove or comment out the PixiLogo positioning code
+        // this._pixiLogo.view.x = 55;
+        // this._pixiLogo.view.y = h - 40;
 
-    this._footer.width = w * 1.2;
-    this._footer.x = w * 0.5;
-    this._footer.y = h;
+        this._footer.width = w * 1.2;
+        this._footer.x = w * 0.5;
+        this._footer.y = h;
 
-    // Remove the fork button positioning code
-    // this._forkBtn.x = w - 55;
-    // this._forkBtn.y = h - 40 + this._forkBtn.height * 0.5 - 5;
+        // Remove the fork button positioning code
+        // this._forkBtn.x = w - 55;
+        // this._forkBtn.y = h - 40 + this._forkBtn.height * 0.5 - 5;
 
-    this._audioBtn.x = w - 40;
-    this._audioBtn.y = 40;
+        this._audioBtn.x = w - 40;
+        this._audioBtn.y = 40;
 
-    this._cannon.view.x = w * 0.5;
-    this._cannon.view.y = h - this._footer.height * 0.5;
+        this._cannon.view.x = w * 0.5;
+        this._cannon.view.y = h - this._footer.height * 0.5;
 
-    this._playBtn.x = w * 0.5;
-    this._playBtn.y = this._cannon.view.y - this._cannon.view.height / 2 - this._playBtn.height / 2 + 10;
+        this._playBtn.x = w * 0.5;
+        this._playBtn.y = this._cannon.view.y - this._cannon.view.height / 2 - this._playBtn.height / 2 + 10;
 
-    this._portholeOne.view.x = 40;
-    this._portholeOne.view.y = 40;
+        this._portholeOne.view.x = 40;
+        this._portholeOne.view.y = 40;
 
-    this._portholeTwo.view.x = w - 40;
-    this._portholeTwo.view.y = this._title.view.y + this._title.view.height + 10;
+        this._portholeTwo.view.x = w - 40;
+        this._portholeTwo.view.y = this._title.view.y + this._title.view.height + 10;
 
-    // Set hit area of hit container to fit screen
-    // Leave a little room to prevent interaction below the cannon
-    this._hitArea.width = w;
-    this._hitArea.height = h - boardConfig.bounceLine * 0.75;
-}
+        // Set hit area of hit container to fit screen
+        // Leave a little room to prevent interaction below the cannon
+        this._hitArea.width = w;
+        this._hitArea.height = h - boardConfig.bounceLine * 0.75;
+    }
 
     /**
      * Calculate the angle between the cannon and the user's pointer position.
